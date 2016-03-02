@@ -1,0 +1,7 @@
+# Tracing options for the es.kybele.elastic.models.e3value.diagram plug-in
+
+# Common issues
+es.kybele.elastic.models.e3value.diagram/debug=false
+
+# Visual IDs
+es.kybele.elastic.models.e3value.diagram/debug/visualID=false

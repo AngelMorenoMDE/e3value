@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/es.kybele.elastic.models.e3value.features_0.0.1.a.jar" id="es.kybele.elastic.models.e3value.features" version="0.0.1.a">
+      <category name="es.kybele.elastic.models.e3value.updatesite.main_category"/>
+   </feature>
+   <category-def name="es.kybele.elastic.models.e3value.updatesite.main_category" label="INNoVaServ Toolkit e3Value Business Model"/>
+</site>

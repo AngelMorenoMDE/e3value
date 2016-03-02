@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="e3value">
+  <figures name="Default">
+    <descriptors name="E3ValueModelFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="E3ValueModelRectangleBase">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <minimumSize dx="800" dy="600"/>
+        <preferredSize dx="800" dy="600"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="E3ValueModelInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft/>
+            <size dx="800" dy="600"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="800" dy="600"/>
+          <preferredSize dx="800" dy="600"/>
+        </children>
+        <children xsi:type="gmfgraph:Label" name="E3ValueModelLabelName" text="E3Value Model Name">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="5" y="5"/>
+            <size dx="300" dy="30"/>
+          </layoutData>
+          <font xsi:type="gmfgraph:BasicFont" faceName="Arial" height="12" style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="MarketSegmentFigure">
+      <actualFigure xsi:type="gmfgraph:InvisibleRectangle" name="RectangleMarketSegmentFigure">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="red"/>
+        <children xsi:type="gmfgraph:Rectangle" name="R1">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="10" y="10"/>
+            <size dx="300" dy="150"/>
+          </layoutData>
+          <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+          <border xsi:type="gmfgraph:LineBorder" width="2">
+            <color xsi:type="gmfgraph:ConstantColor" value="black"/>
+          </border>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="R2">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="5" y="5"/>
+            <size dx="300" dy="150"/>
+          </layoutData>
+          <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+          <border xsi:type="gmfgraph:LineBorder" width="2">
+            <color xsi:type="gmfgraph:ConstantColor" value="black"/>
+          </border>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="R3" lineWidth="2">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft/>
+            <size dx="300" dy="150"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightGray"/>
+          <children xsi:type="gmfgraph:Label" name="MarketSegmentLabelName" text="">
+            <layoutData xsi:type="gmfgraph:XYLayoutData">
+              <topLeft x="10" y="10"/>
+              <size dx="300" dy="30"/>
+            </layoutData>
+            <font xsi:type="gmfgraph:BasicFont" faceName="Arial" style="BOLD"/>
+          </children>
+          <children xsi:type="gmfgraph:InvisibleRectangle" name="MarketSegmentInvisibleRectangleComparment"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.2/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@children.2/@children.1"/>
+    </descriptors>
+    <descriptors name="ElementaryActorFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ElementaryActorFigure" lineWidth="2">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightGray"/>
+        <minimumSize dx="100" dy="100"/>
+        <preferredSize dx="150" dy="150"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="ElementaryActorInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="2" y="2"/>
+            <size dx="98" dy="98"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+        </children>
+        <children xsi:type="gmfgraph:Label" name="ElementaryActorLabelName" text="Elementary Actor Name">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="10" y="10"/>
+            <size dx="100" dy="30"/>
+          </layoutData>
+          <font xsi:type="gmfgraph:BasicFont" faceName="Arial" style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="CompositeActorFigure">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="CompositeActorFigure" lineWidth="2">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightGray"/>
+        <minimumSize dx="100" dy="100"/>
+        <preferredSize dx="100" dy="100"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="CompositeActorInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft/>
+            <size dx="100" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="100" dy="100"/>
+        </children>
+        <children xsi:type="gmfgraph:Label" name="CompositeActorLabelName" text="Composite Actor">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="10" y="10"/>
+            <size dx="100" dy="30"/>
+          </layoutData>
+          <font xsi:type="gmfgraph:BasicFont" faceName="Arial" style="BOLD"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.1"/>
+      <accessors figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="ConnectionElementFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="PolylineConnectionConnectionElement" lineWidth="2" lineKind="LINE_DASH">
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="StartStimulusFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="EllipseExternalStartStimulus" lineWidth="2">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="red"/>
+        <maximumSize dx="20" dy="20"/>
+        <preferredSize dx="20" dy="20"/>
+        <children xsi:type="gmfgraph:Ellipse" name="EllipseInternalStartStimulus">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="8" y="8"/>
+            <size dx="4" dy="4"/>
+          </layoutData>
+          <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        </children>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="EndStimulusFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="EllipseExternalEndStimulus">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor"/>
+        <maximumSize dx="20" dy="20"/>
+        <preferredSize dx="20" dy="20"/>
+        <children xsi:type="gmfgraph:Ellipse" name="EllipseRedEndStimulus">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="2" y="2"/>
+            <size dx="16" dy="16"/>
+          </layoutData>
+          <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="red"/>
+          <maximumSize dx="16" dy="16"/>
+          <preferredSize dx="16" dy="16"/>
+        </children>
+        <children xsi:type="gmfgraph:Ellipse" name="EllipseInternalEndStimulus">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="8" y="8"/>
+            <size dx="4" dy="4"/>
+          </layoutData>
+          <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+          <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        </children>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ValueInterfaceFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ValueInterfaceRoundedRectangle" lineWidth="2" cornerWidth="20" cornerHeight="20">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="100" dy="20"/>
+        <preferredSize dx="100" dy="20"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="ValuePortInInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="20"/>
+            <size dx="20" dy="20"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <maximumSize dx="20" dy="20"/>
+          <preferredSize dx="20" dy="20"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="ValuePortOutInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="60"/>
+            <size dx="20" dy="20"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <maximumSize dx="20" dy="20"/>
+          <preferredSize dx="20" dy="20"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="ResponsabilityElementInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="50" y="2"/>
+            <size dx="8" dy="8"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <maximumSize dx="8" dy="8"/>
+          <minimumSize dx="8" dy="8"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.2"/>
+      <accessors figure="//@figures.0/@descriptors.7/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="ValuePortInFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Polygon" name="ValuePortIntPolygon" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="16" dy="16"/>
+        <preferredSize dx="16" dy="16"/>
+        <template/>
+        <template x="16" y="8"/>
+        <template y="16"/>
+        <template/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ValuePortOutFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Polygon" name="ValuePortOutPolygon" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="16" dy="16"/>
+        <preferredSize dx="16" dy="16"/>
+        <template/>
+        <template x="16" y="8"/>
+        <template y="16"/>
+        <template/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ValueExchangeFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ValueExchangePolylineConnection" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="blue"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ResponsabilityElementFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Rectangle" name="ResponsabilityElementRectangle">
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="6" dy="6"/>
+        <minimumSize dx="6" dy="6"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="ValueObjectFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:InvisibleRectangle" name="ValueObjectInvisibleRectangleBase">
+        <layout xsi:type="gmfgraph:FlowLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <children xsi:type="gmfgraph:Label" name="ValueObjectLabel" text="[Value Object]"/>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.12/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="AndForkFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:InvisibleRectangle" name="AndForkInvisibleRectangleBase">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <minimumSize dx="60" dy="100"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="AndForkInputPortInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="5" y="45"/>
+            <size dx="10" dy="10"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="10" dy="10"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="AndForkFigureInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="20"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <children xsi:type="gmfgraph:ScalablePolygon" name="AndFigure" lineWidth="2">
+            <template/>
+            <template x="20" y="50"/>
+            <template y="100"/>
+            <template/>
+          </children>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="AndForkOutputPortsInvisibleRectangleComparment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="40"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="20" dy="100"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.13/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.13/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="AndJoinFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:InvisibleRectangle" name="AndJoinInvisibleRectangleBase">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <minimumSize dx="60" dy="100"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="AndJoinInputPortsInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="5" y="45"/>
+            <size dx="10" dy="10"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="10" dy="10"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="AndJoinFigureInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="20"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <children xsi:type="gmfgraph:ScalablePolygon" name="AndFigure" lineWidth="2">
+            <template/>
+            <template x="20" y="50"/>
+            <template y="100"/>
+            <template/>
+          </children>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="AndJoinOutputPortInvisibleRectangleComparment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="40"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="20" dy="100"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.14/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.14/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="OrForkFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:InvisibleRectangle" name="OrForkInvisibleRectangleBase">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <minimumSize dx="60" dy="100"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="OrForkInputPortInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="5" y="45"/>
+            <size dx="10" dy="10"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="10" dy="10"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="OrForkFigureInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="20"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <children xsi:type="gmfgraph:ScalablePolygon" name="AndFigure" lineWidth="2">
+            <template/>
+            <template x="20" y="50"/>
+            <template y="100"/>
+            <template/>
+          </children>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="OrForkOutputPortsInvisibleRectangleComparment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="40"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="20" dy="100"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.15/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.15/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="OrJoinFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:InvisibleRectangle" name="OrJoinInvisibleRectangleBase">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <minimumSize dx="60" dy="100"/>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="OrJoinInputPortsInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="5" y="45"/>
+            <size dx="10" dy="10"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="10" dy="10"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="OrJoinFigureInvisibleRectangle">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="20"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+          <children xsi:type="gmfgraph:ScalablePolygon" name="AndFigure" lineWidth="2">
+            <template/>
+            <template x="20" y="50"/>
+            <template y="100"/>
+            <template/>
+          </children>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="OrJoinOutputPortInvisibleRectangleComparment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="40"/>
+            <size dx="20" dy="100"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:StackLayout"/>
+          <minimumSize dx="20" dy="100"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.16/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ValueActivityFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="ValueActivityRoundedRectangleBase" lineWidth="2" cornerWidth="15" cornerHeight="15">
+        <layout xsi:type="gmfgraph:XYLayout"/>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="lightGray"/>
+        <minimumSize dx="100" dy="100"/>
+        <preferredSize dx="150" dy="150"/>
+        <children xsi:type="gmfgraph:Label" name="ValueActivityLabel" text="Value Activity Name">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft x="10" y="10"/>
+            <size dx="100" dy="30"/>
+          </layoutData>
+          <font xsi:type="gmfgraph:BasicFont" faceName="Arial" style="BOLD"/>
+        </children>
+        <children xsi:type="gmfgraph:InvisibleRectangle" name="ValueActivityInvisibleRectangleCompartment">
+          <layoutData xsi:type="gmfgraph:XYLayoutData">
+            <topLeft/>
+            <size dx="150" dy="150"/>
+          </layoutData>
+          <layout xsi:type="gmfgraph:XYLayout"/>
+        </children>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.17/@actualFigure/@children.0"/>
+      <accessors figure="//@figures.0/@descriptors.17/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="ValueExchangeToValueObjectConnectionFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ValueExchangeToValueObjectConnectionPolylineConnection" lineWidth="2">
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="InputPortFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="InputPortFigureDescriptor">
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="5" dy="5"/>
+        <minimumSize dx="5" dy="5"/>
+      </actualFigure>
+    </descriptors>
+    <descriptors name="OutputPortFigureDescriptor">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="OutputPortFigureDescriptor">
+        <backgroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="5" dy="5"/>
+        <minimumSize dx="5" dy="5"/>
+      </actualFigure>
+    </descriptors>
+  </figures>
+  <nodes name="MarketSegment" figure="MarketSegmentFigure"/>
+  <nodes name="InputPort" figure="InputPortFigureDescriptor"/>
+  <nodes name="OutputPort" figure="OutputPortFigureDescriptor"/>
+  <nodes name="ElementaryActor" figure="ElementaryActorFigure"/>
+  <nodes name="CompositeActor" figure="CompositeActorFigure"/>
+  <nodes name="StartStimulusNodeDiagram" figure="StartStimulusFigureDescriptor"/>
+  <nodes name="EndStimulusNodeDiagram" figure="EndStimulusFigureDescriptor"/>
+  <nodes name="ResponsabilityElementNodeDiagram" figure="ResponsabilityElementFigureDescriptor"/>
+  <nodes name="ValueInterfaceNodeDiagram" figure="ValueInterfaceFigureDescriptor" affixedParentSide="NSEW"/>
+  <nodes name="ValuePortInNodeDiagram" figure="ValuePortInFigureDescriptor"/>
+  <nodes name="ValuePortOutNodeDiagram" figure="ValuePortOutFigureDescriptor"/>
+  <nodes name="ValueActivityNodeDiagram" figure="ValueActivityFigureDescriptor"/>
+  <nodes name="ValueObjectNodeDiagram" figure="ValueObjectFigureDescriptor"/>
+  <nodes name="AndForkNodeDiagram" figure="AndForkFigureDescriptor"/>
+  <nodes name="AndJoinNodeDiagram" figure="AndJoinFigureDescriptor"/>
+  <nodes name="OrForkNodeDiagram" figure="OrForkFigureDescriptor"/>
+  <nodes name="OrJoinNodeDiagram" figure="OrJoinFigureDescriptor"/>
+  <nodes name="E3ValueModelNodeDiagram" figure="E3ValueModelFigureDescriptor"/>
+  <connections name="ValueExchangeToValueObjectConnectionDiagram" figure="ValueExchangeToValueObjectConnectionFigureDescriptor"/>
+  <connections name="ConnectionElementConnectionDiagram" figure="ConnectionElementFigureDescriptor"/>
+  <connections name="ValueExchangeConnectionDiagram" figure="ValueExchangeFigureDescriptor"/>
+  <compartments name="ValuePortInCompartmentDiagram" figure="ValuePortInFigureDescriptor" accessor="//@figures.0/@descriptors.7/@accessors.0"/>
+  <compartments name="ValuePortOutCompartmentDiagram" figure="ValuePortOutFigureDescriptor" accessor="//@figures.0/@descriptors.7/@accessors.2"/>
+  <compartments name="ResponsabilityElementCompartmentDiagram" figure="ResponsabilityElementFigureDescriptor" accessor="//@figures.0/@descriptors.7/@accessors.1"/>
+  <compartments name="ElementaryActorCompartmentDiagram" figure="ElementaryActorFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <compartments name="CompositeActorCompartmentDiagram" figure="CompositeActorFigure" accessor="//@figures.0/@descriptors.3/@accessors.1"/>
+  <compartments name="E3ValueModelCompartmentDiagram" figure="E3ValueModelFigureDescriptor" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <compartments name="MarketSegmentComparmentDiagram" figure="MarketSegmentFigure" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+  <compartments name="ValueActivityCompartmentDiagram" figure="ValueActivityFigureDescriptor" accessor="//@figures.0/@descriptors.17/@accessors.1"/>
+  <compartments name="AndForkOutputPortsCompartmentDiagram" figure="AndForkFigureDescriptor" accessor="//@figures.0/@descriptors.13/@accessors.1"/>
+  <compartments name="AndForkInputPortCompartmentDiagram" figure="AndForkFigureDescriptor" accessor="//@figures.0/@descriptors.13/@accessors.0"/>
+  <compartments name="OrForkOutputPortsCompartmentDiagram" figure="OrForkFigureDescriptor" accessor="//@figures.0/@descriptors.15/@accessors.1"/>
+  <compartments name="OrForkInputPortCompartmentDiagram" figure="OrForkFigureDescriptor" accessor="//@figures.0/@descriptors.15/@accessors.0"/>
+  <compartments name="AndJoinOutputPortCompartmentDiagram" figure="AndJoinFigureDescriptor" accessor="//@figures.0/@descriptors.14/@accessors.1"/>
+  <compartments name="AndJoinInputPortsCompartmentDiagram" figure="AndJoinFigureDescriptor" accessor="//@figures.0/@descriptors.14/@accessors.0"/>
+  <compartments name="OrJoinOutputPortCompartmentDiagram" figure="OrJoinFigureDescriptor" accessor="//@figures.0/@descriptors.16/@accessors.1"/>
+  <compartments name="OrJoinInputPortsCompartmentDiagram" figure="OrJoinFigureDescriptor" accessor="//@figures.0/@descriptors.16/@accessors.0"/>
+  <labels name="MarketSegmentDiagramLabel" figure="MarketSegmentFigure" elementIcon="false" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="ElementaryActorName" figure="ElementaryActorFigure" elementIcon="false" accessor="//@figures.0/@descriptors.2/@accessors.1"/>
+  <labels name="CompositeActorName" figure="CompositeActorFigure" elementIcon="false" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="ValueObjectDiagramLabel" figure="ValueObjectFigureDescriptor" elementIcon="false" accessor="//@figures.0/@descriptors.12/@accessors.0"/>
+  <labels name="ValueActivityDiagramLabel" figure="ValueActivityFigureDescriptor" elementIcon="false" accessor="//@figures.0/@descriptors.17/@accessors.0"/>
+</gmfgraph:Canvas>

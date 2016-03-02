@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="e3value" nsURI="http://www.kybele.es/elastic/models/e3value/1.0"
+    nsPrefix="e3value">
+  <eClassifiers xsi:type="ecore:EClass" name="E3ValueDiagram">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasE3ValueModels" upperBound="-1"
+        eType="#//E3ValueModel" containment="true" eOpposite="#//E3ValueModel/inE3ValueDiagram"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="E3ValueModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueExchanges" upperBound="-1"
+        eType="#//ValueExchange" containment="true" eOpposite="#//ValueExchange/inE3ValueModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inE3ValueDiagram" lowerBound="1"
+        eType="#//E3ValueDiagram" eOpposite="#//E3ValueDiagram/hasE3ValueModels"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasBusinessActors" upperBound="-1"
+        eType="#//BusinessActor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueObjects" upperBound="-1"
+        eType="#//ValueObject" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDependenceElements"
+        upperBound="-1" eType="#//DependencyElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BusinessActor" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueInterfaces" upperBound="-1"
+        eType="#//ValueInterface" containment="true" eOpposite="#//ValueInterface/inBusinessActor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueActivities" upperBound="-1"
+        eType="#//ValueActivity" containment="true" eOpposite="#//ValueActivity/inBusinessActor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasStimulusElements" upperBound="-1"
+        eType="#//StimulusElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDependenceElements"
+        upperBound="-1" eType="#//DependencyElement" containment="true" eOpposite="#//DependencyElement/inBusinessActor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueObjects" upperBound="-1"
+        eType="#//ValueObject" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Actor" abstract="true" eSuperTypes="#//BusinessActor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MarketSegment" eSuperTypes="#//BusinessActor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementaryActor" eSuperTypes="#//Actor"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeActor" eSuperTypes="#//Actor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasElementaryActors" upperBound="-1"
+        eType="#//ElementaryActor" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DependencyElement" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inBusinessActor" eType="#//BusinessActor"
+        eOpposite="#//BusinessActor/hasDependenceElements"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inValueActivity" eType="#//ValueActivity"
+        eOpposite="#//ValueActivity/hasDependenceElements"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LogicalElement" abstract="true" eSuperTypes="#//DependencyElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponsabilityElement" eSuperTypes="#//PortElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boundsToValueInterface"
+        lowerBound="1" eType="#//ValueInterface" eOpposite="#//ValueInterface/bindsResponsabilityElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValuePort" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ValuePortIn" eSuperTypes="#//ValuePort">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inConnectWithValueExchange"
+        eType="#//ValueExchange"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inValueInterface" eType="#//ValueInterface"
+        eOpposite="#//ValueInterface/hasValuePortIn"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValuePortOut" eSuperTypes="#//ValuePort">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outConnectWithValueExchange"
+        eType="#//ValueExchange"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inValueInterface" eType="#//ValueInterface"
+        eOpposite="#//ValueInterface/hasValuePortOut"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="JoinElement" abstract="true" eSuperTypes="#//LogicalElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasInputPorts" upperBound="-1"
+        eType="#//InputPort" containment="true" eOpposite="#//InputPort/inJoinElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOutputPort" eType="#//OutputPort"
+        containment="true" eOpposite="#//OutputPort/inJoinElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ForkElement" abstract="true" eSuperTypes="#//LogicalElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasOutputPorts" upperBound="-1"
+        eType="#//OutputPort" containment="true" eOpposite="#//OutputPort/inForkElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasInputPort" eType="#//InputPort"
+        containment="true" eOpposite="#//InputPort/inForkElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AndFork" eSuperTypes="#//ForkElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AndJoin" eSuperTypes="#//JoinElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrFork" eSuperTypes="#//ForkElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrJoin" eSuperTypes="#//JoinElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StimulusElement" abstract="true" eSuperTypes="#//DependencyElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StartStimulus" eSuperTypes="#//StimulusElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EndStimulus" eSuperTypes="#//StimulusElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionElement" eSuperTypes="#//DependencyElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceDependenceElement"
+        lowerBound="1" eType="#//DependencyElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetDependenceElement"
+        lowerBound="1" eType="#//DependencyElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inBusinessActor" eType="#//BusinessActor"
+        eOpposite="#//BusinessActor/hasValueInterfaces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inValueActivity" eType="#//ValueActivity"
+        eOpposite="#//ValueActivity/hasValueInterfaces"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValuePortIn" lowerBound="1"
+        eType="#//ValuePortIn" containment="true" eOpposite="#//ValuePortIn/inValueInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValuePortOut" lowerBound="1"
+        eType="#//ValuePortOut" containment="true" eOpposite="#//ValuePortOut/inValueInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindsResponsabilityElement"
+        lowerBound="1" eType="#//ResponsabilityElement" containment="true" eOpposite="#//ResponsabilityElement/boundsToValueInterface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueExchange">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sourceValuePort" eType="#//ValuePort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targetValuePort" eType="#//ValuePort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueObject" lowerBound="1"
+        eType="#//ValueObject" eOpposite="#//ValueObject/inValueExchange"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inE3ValueModel" eType="#//E3ValueModel"
+        eOpposite="#//E3ValueModel/hasValueExchanges"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueActivity">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inBusinessActor" eType="#//BusinessActor"
+        eOpposite="#//BusinessActor/hasValueActivities"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasValueInterfaces" upperBound="-1"
+        eType="#//ValueInterface" containment="true" eOpposite="#//ValueInterface/inValueActivity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasStimulusElement" upperBound="-1"
+        eType="#//StimulusElement" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hasDependenceElements"
+        upperBound="-1" eType="#//DependencyElement" containment="true" eOpposite="#//DependencyElement/inValueActivity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortElement" abstract="true" eSuperTypes="#//DependencyElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InputPort" eSuperTypes="#//PortElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inForkElement" eType="#//ForkElement"
+        eOpposite="#//ForkElement/hasInputPort"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inJoinElement" eType="#//JoinElement"
+        eOpposite="#//JoinElement/hasInputPorts"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputPort" eSuperTypes="#//PortElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inForkElement" eType="#//ForkElement"
+        eOpposite="#//ForkElement/hasOutputPorts"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inJoinElement" eType="#//JoinElement"
+        eOpposite="#//JoinElement/hasOutputPort"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValueObject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inValueExchange" lowerBound="1"
+        eType="#//ValueExchange" eOpposite="#//ValueExchange/hasValueObject"/>
+  </eClassifiers>
+</ecore:EPackage>
